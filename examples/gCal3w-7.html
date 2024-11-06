@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+    var d = new Date();
+    d = new Date(d.setDate(d.getDate() - 7));
+    var year = d.getFullYear();
+    var month = ("0" + (d.getMonth() + 1)).slice(-2);
+    var day = ("0" + d.getDate()).slice(-2);
+    var link = "https://calendar.google.com/calendar/u/0/r/custom/3/w/" + year + "/" + month + "/" + day;
+    window.location.href = link;
+  </script>
+</head>
+
+<body>
+  <p>Google Calendar 3w -7</p>
+</body>
+
+</html>
