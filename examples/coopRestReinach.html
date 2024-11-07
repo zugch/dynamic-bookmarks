@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+    var coopId = 2056; /* Coop Reinach */
+    var date = new Date();
+    var currentThursday = new Date(date.getTime() + (3 - ((date.getDay() + 6) % 7)) * 86400000);
+    var yearOfThursday = currentThursday.getFullYear();
+    var firstThursday = new Date(new Date(yearOfThursday, 0, 4).getTime() + (3 - ((new Date(yearOfThursday, 0, 4).getDay() + 6) % 7)) * 86400000);
+    var weekNumber = Math.floor(1 + 0.5 + (currentThursday.getTime() - firstThursday.getTime()) / 86400000 / 7);
+    var link = "https://contentimages.coop.ch/RestaurantMenuplan/pdfmenu_" + weekNumber + "_" + coopId + "_de.pdf";
+    window.location.href = link;
+  </script>
+</head>
+
+<body>
+  <p>Coop Restaurant Reinach</p>
+</body>
+
+</html>
